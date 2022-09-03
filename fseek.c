@@ -46,6 +46,7 @@ case SEEK_SET:
 		fp->_flags  &= ~__SEOF;
 		return 0;
 	}
+	else return -1;
 
 	
 case SEEK_CUR:
