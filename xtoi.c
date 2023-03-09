@@ -59,7 +59,7 @@ std::ostream &operator<<(std::ostream &s, _std::DChar c) {
 }
 #endif
 
-int atoi(const char *numstr) {
+int _atoi(const char *numstr) {
 	int t_num =  0;
 	for(int i=0,ep=1;i<strlen(numstr);++i) {
 		if(!(*(numstr + i) >= '0' && *(numstr + i)<='9')) return 0;
@@ -70,10 +70,12 @@ int atoi(const char *numstr) {
 	return t_num;
 }
 // testing
+#ifdef __MAIN__
 int main() {
-	printf("%d\n", atoi("1234152"));
+	printf("%d\n", _atoi("1234152"));
 #ifdef __cpp 
 	_std::DChar prop = dtoi(_std::DChar("123"));
-	 std::cout << prop << "\n";
+ 	std::cout << prop << "\n";
 #endif
 }
+#endif

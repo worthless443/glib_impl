@@ -60,6 +60,7 @@ default:
 	}
 }
 
+#ifdef __MAIN__ 
 int main() {
  	FILE *f = fopen("file.txt", "r");
 	struct stat_flags_ st;
@@ -69,3 +70,4 @@ int main() {
 	printf("%d\n", ret);
 	while(fread(buf,1,1,f)) printf("%s\n", buf);
 }
+#endif
